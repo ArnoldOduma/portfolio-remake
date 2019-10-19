@@ -1,0 +1,44 @@
+.about-section{
+  padding-top: 200px;
+}
+.about-section h2{
+  text-align: center;
+  font-size: calc(4em);
+  color: white;
+  padding-bottom: 100px;
+  font-family: 'typographica', sans-serif;
+  letter-spacing: 10px;
+}
+.abt-desc{
+  border: 2px solid white;
+  padding: 30px 10%;
+  width: 700px;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 10%;
+}
+.abt-desc p{
+  font-size: 1.2em;
+}
+.abt-desc p span{
+  font-size: 2em;
+  font-family: 'typographica', sans-serif;
+  letter-spacing: 3px;
+}
+.abt-desc ul{
+  padding-left: 10%;
+  color: white;
+  margin: 10px 0;
+}
+.abt-desc ul li{
+  list-style-type: circle;
+
+}
+.abt-desc a{
+  color: inherit;
+}
+@media only screen and (max-width: 800px){
+  .abt-desc p{
+    font-size: 1em;
+  }
+}

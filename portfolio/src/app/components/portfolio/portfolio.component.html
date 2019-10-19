@@ -1,0 +1,252 @@
+<section class="portfolio-section">
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="svg--sm" points="0,0 20,80 50,30 80,90 100,20 100,0" />
+    <polygon class="svg--lg" points="0,40 15,90 35,25 50,95 58,70 65,90 79,35 95,90 100,50 100,100 0,100" />
+  </svg>
+
+  <div class="portfolio-header">
+    <h2>PORTFOLIO</h2>
+    <div class="see-work">
+      <p><span>Get to see my work.</span> <br> You will also you have an opportunity to view both the live site and the
+        code behind it on github</p>
+    </div>
+  </div>
+
+
+  <section *ngIf="loading">
+    <div class="proj-loader p-loader-small">
+      <ngx-content-loading [speed]="'1500ms'" [width]="250" [height]="300" [primaryColor]="'#fff'"
+        [secondaryColor]="'#F69131'">
+        <svg:g ngx-rect width="100%" height="40%" y="10" x="0" rx="5" ry="0"></svg:g>
+        <svg:g ngx-rect width="60%" height="40" y="39%" x="20%" rx="5" ry="5"></svg:g>
+        <svg:g ngx-rect width="150" height="20" y="170" x="0" rx="5" ry="0"></svg:g>
+        <svg:g ngx-rect width="90" height="10" y="200" x="0" rx="5" ry="0"></svg:g>
+        <svg:g ngx-rect width="210" height="10" y="220" x="0" rx="5" ry="0"></svg:g>
+        <svg:g ngx-rect width="240" height="10" y="240" x="0" rx="5" ry="0"></svg:g>
+      </ngx-content-loading>
+    </div>
+    <div class="proj-loader p-loader-huge">
+      <ngx-content-loading [speed]="'1500ms'" [width]="400" [height]="200" [primaryColor]="'#fff'"
+        [secondaryColor]="'#F69131'">
+        <svg:g ngx-rect width="100%" height="80%" y="10" x="0" rx="5" ry="0"></svg:g>
+        <svg:g ngx-rect width="60%" height="40" y="79%" x="20%" rx="5" ry="5"></svg:g>
+      </ngx-content-loading>
+
+      <ngx-content-loading [speed]="'1500ms'" [width]="400" [height]="200" [primaryColor]="'#fff'"
+        [secondaryColor]="'#F69131'">
+        <svg:g ngx-rect width="60%" height="40" y="10" x="0" rx="5" ry="0"></svg:g>
+        <svg:g ngx-rect width="150" height="20" y="60" x="0" rx="5" ry="0"></svg:g>
+        <svg:g ngx-rect width="100%" height="10" y="90" x="0" rx="5" ry="0"></svg:g>
+        <svg:g ngx-rect width="90%" height="10" y="110" x="0" rx="5" ry="0"></svg:g>
+        <svg:g ngx-rect width="80%" height="10" y="130" x="0" rx="5" ry="0"></svg:g>
+      </ngx-content-loading>
+    </div>
+
+  </section>
+
+  <section class="projects-cont" *ngIf="!loading">
+    <div class="each-proj proj-1">
+      <p class="test"></p>
+      <div>
+        <div class="proj-left-div">
+          <img src="./assets/img/cook-it.png" width="100%" />
+          <span>
+            <i class="fab fa-java"></i>
+            <i class="fab fa-android"></i>
+            <i class="far fa-file-code"></i>
+          </span>
+
+        </div>
+        <div class="proj-right-div">
+          <h3>Cook It</h3>
+          <p>This is an application that displays various meal recipes to choose from. One can also be able to follow
+            through the instructions to make a meal. </p>
+          <ul>
+            <p>Technologies used</p>
+            <div>
+              <p>Front-End</p>
+              <li>Android</li>
+            </div>
+            <div>
+              <p>Back-End</p>
+              <li>Java </li>
+              <li>Firebase</li>
+            </div>
+          </ul>
+          <div>
+            <button class="gn-btn" routerLink="404"> <span>View live site</span><i>&rarr;</i></button>
+            <button class="gn-btn git"> <a href="http://github.com/ArnoldOduma/Cook-It" target="_blank"
+                rel="noopener noreferrer"><span>View on github</span></a> <i>&rarr;</i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="each-proj proj-2">
+      <div>
+        <div class="proj-left-div">
+          <img src="./assets/img/lifelong.png" width="100%" />
+          <span>
+            <i class="fab fa-angular"></i>
+            <i class="far fa-file-code"></i>
+            <i class="fas fa-database"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+          </span>
+
+        </div>
+        <div class="proj-right-div">
+          <h3>Eazy Search</h3>
+          <p>Eazy search is an application that gets your location and lists businesses, services and housing near you.
+            All the businesses, housing and services are authenticated first before posting. A user can also search the
+            application for services near them and be able to view the contact details of the service provider.
+            It was made by a team of two. I did the front end and <a href="https://jamesmutahi.github.io/portfolio/">James Mutahi</a> did the Django API Backend</p>
+          <ul>
+            <p>Technologies used</p>
+            <div>
+              <p>Front-End</p>
+              <li>Angular </li>
+              <li>Google Maps</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </div>
+            <div>
+              <p>Backend</p>
+              <li>Django</li>
+              <li>Django Restful API</li>
+              <li>Potgress</li>
+            </div>
+          </ul>
+          <div>
+            <button class="gn-btn"><a href="https://lifelong-families.firebaseapp.com/home" target="_blank"
+                rel="noopener noreferrer"><span>View live site</span></a> <i>&rarr;</i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="each-proj proj-2">
+      <div>
+        <div class="proj-left-div">
+          <img src="./assets/img/emiwell.jpg" width="100%" />
+          <span>
+            <i class="fab fa-angular"></i>
+            <i class="fas fa-database"></i>
+            <i class="fab fa-sass"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+          </span>
+
+        </div>
+        <div class="proj-right-div">
+          <h3>Emiwell</h3>
+          <p>Emiwell is a therapy firm that offers therapeutic services and mental health awareness. A user can book an
+            appointment through the site and email notifications are sent to both Emiwell and the person booking. The
+            application is also connected to the counsellors callendar so that incase of a booking the calendar is
+            automatically updated. </p>
+          <ul>
+            <p>Technologies used</p>
+            <div>
+              <p>Front-End</p>
+              <li>Angular </li>
+              <li>HTML</li>
+              <li>SCSS</li>
+            </div>
+            <div>
+              <p>Back-End</p>
+              <li>Firebase</li>
+            </div>
+          </ul>
+          <div>
+            <button class="gn-btn"><a href="https://lifelong-families.firebaseapp.com/home" target="_blank"
+                rel="noopener noreferrer"><span>View live site</span></a> <i>&rarr;</i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="each-proj proj-1">
+      <div>
+        <div class="proj-left-div">
+          <img src="./assets/img/herosq.png" width="100%" />
+          <span>
+            <i class="fab fa-java"></i>
+            <i class="fas fa-database"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+          </span>
+
+        </div>
+        <div class="proj-right-div">
+          <h3>Hero Squad</h3>
+          <p>This is a fun application for the super hero lovers. A user can create a squad and add heroes to their
+            squad. Fun ? isn't it? Lets go and make Hero Squads!!!</p>
+          <ul>
+            <p>Technologies used</p>
+            <div>
+              <p>Front-End</p>
+              <li>Spark Java microframework</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </div>
+            <div>
+              <p>Back-End</p>
+              <li>Java </li>
+              <li>PostgreSql</li>
+            </div>
+          </ul>
+          <div>
+            <button class="gn-btn"><a href="https://techspaceke-hero-squad.herokuapp.com" target="_blank"
+                rel="noopener noreferrer"><span>View live site</span></a> <i>&rarr;</i></button>
+            <button class="gn-btn git"><a href="https://github.com/ArnoldOduma/Hero-Squad" target="_blank"
+                rel="noopener noreferrer"><span>View on github</span></a> <i>&rarr;</i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="each-proj proj-1">
+      <div>
+        <div class="proj-left-div">
+          <p class="in-progress">In Progress</p>
+          <img src="./assets/img/egesha.png" width="100%" />
+          <span>
+            <i class="fab fa-java"></i>
+            <i class="fab fa-android"></i>
+            <i class="fas fa-code"></i>
+            <i class="far fa-file-code"></i>
+            <i class="fas fa-map-marker-alt"></i>
+          </span>
+
+        </div>
+        <div class="proj-right-div">
+          <h3>Egesha</h3>
+          <p>Egesha is an Application that enables vehicle users to find easy parking services around them. The
+            application will show a user the available parking near them and a user can be able to pay for the parking
+            before hand. </p>
+          <ul>
+            <p>Technologies used</p>
+            <div>
+              <p>Front-End</p>
+              <li>Google Maps</li>
+              <li>Android</li>
+            </div>
+            <div>
+              <p>Back-End</p>
+              <li>Java </li>
+              <li>Firebase </li>
+              <li>APIs</li>
+            </div>
+          </ul>
+          <div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+</section>

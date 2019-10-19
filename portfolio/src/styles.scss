@@ -1,0 +1,112 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+@font-face {
+  font-family: 'typographica';
+  src: url('src/assets/fonts/typographica.ttf');
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  // font-family: 'typographica', sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background: #00aeff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.gn-btn {
+  display: inline-block;
+  padding: 4px;
+  background: #F69131;
+  position: relative;
+  cursor: pointer;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+}
+
+.gn-btn span {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 5px 15px;
+  margin-right: 40px;
+  color: white;
+  transition-duration: 0.2s;
+}
+
+.gn-btn i {
+  display: inline-block;
+  font-size: 40px;
+  position: absolute;
+  right: 0px;
+  top: -35%;
+  color: white;
+  animation: move 2s infinite;
+  text-shadow: 0 0 10px #000000;
+}
+
+@keyframes move {
+  0% {
+    right: 0px;
+  }
+
+  25% {
+    right: 5px;
+  }
+
+  50% {
+    right: -10px;
+  }
+
+  70% {
+    right: 5x;
+  }
+
+  90% {
+    right: 0px;
+  }
+
+}
+
+.gn-btn:hover {
+  box-shadow: 0 0 10px #000000;
+  border-radius: 5px;
+}
+
+.gn-btn:hover span {
+  background: white;
+  color: black;
+  padding-right: 20px;
+  text-shadow: 0 0 10px #000000;
+}
+
+.gn-btn:hover i {
+  color: #000000;
+  right: -15px;
+  /* transition-duration: 0.2s; */
+  animation: none;
+}
+
+.gn-btn:active span {
+  padding-right: 15px;
+}
+
+.gn-btn:active i {
+  right: 0px;
+}

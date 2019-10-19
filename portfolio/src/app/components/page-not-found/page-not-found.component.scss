@@ -1,0 +1,103 @@
+section {
+  position: relative;
+  min-width: 100%;
+  min-height: 100vh;
+  background: rgb(0, 151, 211);
+  z-index: 100;
+  overflow: hidden;
+
+}
+
+.page-404 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.page-404>div {
+  padding: 50px 0;
+  width: 500px;
+  max-width: 100%;
+
+}
+
+.page-404 .page-404-info {
+  text-align: left;
+  padding: 30px;
+  border: 5px solid #F69131;
+}
+
+.page-404-info h1 {
+  font-size: 2.3em;
+}
+
+.page-404-info h1 span {
+  font-size: 3em;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.page-404-info p {
+  font-size: 1.1em;
+}
+
+a {
+  text-decoration: underline;
+  color: rgb(255, 255, 255);
+  text-shadow: black;
+}
+
+.fire-div {
+  /* background: #A9ABA6; */
+  animation: reveal 5s 1;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+    transform: translate(100%);
+  }
+}
+
+.fire {
+  background: red;
+  border: none;
+  position: relative;
+
+}
+
+.fire-img-div,
+.fire-btn-div {
+  width: 40%;
+  display: inline-block;
+}
+
+.fire-div p {
+  font-size: 1.05em;
+  padding: 0 30px
+}
+
+.fire-div img {
+  border-radius: 0 50% 50% 0;
+  width: 100%;
+}
+
+
+@media only screen and (max-width: 550px) {
+  .page-404>div {
+    margin: 10px 7%;
+  }
+
+  .fire-img-div,
+  .fire-btn-div {
+    width: 70%;
+  }
+}

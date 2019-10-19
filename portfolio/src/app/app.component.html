@@ -1,0 +1,68 @@
+<header id="header">
+  <div class="humberg-menu ">
+    <hr>
+    <hr>
+    <hr>
+  </div>
+  <img routerLink="/home" src="./assets/img/logo-1.png" width="100%">
+  <nav>
+    <ul>
+      <li><a href="https://docs.google.com/document/d/1E0Q1BnPCfgCG9oCTISIOd49xthlYzBP6itv7yPmIuLM/edit?usp=sharing"
+          target="_blank" rel="noopener noreferrer"> Resume</a></li>
+      <li routerLink="home" routerLinkActive="active">Home</li>
+      <li routerLink="about" routerLinkActive="active">About</li>
+      <li routerLink="portfolio" routerLinkActive="active">Portfolio</li>
+      <li class="modal-btn" routerLinkActive="active">Contact</li>
+    </ul>
+  </nav>
+</header>
+
+<section class="modal modal-show">
+  <div class="humberg-modal humberg-modal-x">
+    <hr>
+    <hr>
+  </div>
+  <div class="contact-form">
+    <h1>Contact me today and lets set uo an appointment.<span>I'll buy the cofee</span> </h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="Name" formControlName="name">
+      <input type="text" placeholder="Email" formControlName="email">
+      <textarea placeholder="Message" formControlName="message"> </textarea>
+      <button type="submit" [disabled]="form.invalid">Submit</button>
+    </form>
+  </div>
+
+</section>
+
+
+<!--------------------------------------
+             ROUTER SECTION
+----------------------------------------->
+<section class="router-outlet">
+  <router-outlet></router-outlet>
+</section>
+<!--------------------------------------
+          END OF ROUTER SECTION
+----------------------------------------->
+
+
+
+<footer>
+  <div>
+    <p class="contacts">Phone: +254-716-832-927 <br>
+      Email: techspaceke@gmail.com <br>
+      copyrights &copy; {{year}} | Arnold Oduma | All rights reserved</p>
+
+    <p class="footer-icons">
+      <a href="https://web.facebook.com/arnoldcliff98" target="blank"><i class="fab fa-facebook"></i></a>
+      <a href="http://twitter.com/odumaarnold" target="_blank" rel="noopener noreferrer"><i
+          class="fab fa-twitter"></i></a>
+      <a href="http://www.linkedin.com/in/arnold-oduma" target="_blank" rel="noopener noreferrer"><i
+          class="fab fa-linkedin-in"></i></a>
+
+    </p>
+    <p class="credit">Designed by: <strong>Arnold Oduma </strong></p>
+  </div>
+  <a class="top"><a>&uarr; <div class="inner-top "></div> </a></a>
+
+</footer>
