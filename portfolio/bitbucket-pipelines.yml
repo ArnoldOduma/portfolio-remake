@@ -1,14 +1,14 @@
-image: node
+image: node:10.15.0
 
 pipelines:
   default:
     - step:
-        name: Test
+        name: Deploy to Test
         script:
           - npm install && npm test
 
     - step:
-        name: Build
+        name: Deploy to Build
         script:
           - npm install && npm run build
         artifacts:
@@ -17,7 +17,7 @@ pipelines:
     - step:
         name: Deploy to Firebase
         deployment: production
-        trigger: 
+        trigger:
         script:
           - pipe: atlassian/firebase-deploy:0.2.4
             variables:
