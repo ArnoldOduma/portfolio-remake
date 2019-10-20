@@ -37,7 +37,7 @@ pipelines:
         deployment: production
         trigger:
         script:
-          - pipe: atlassian/firebase-deploy:0.2.4
+          - pipe: atlassian/firebase-deploy:0.2.4 --only hosting
             variables:
               FIREBASE_TOKEN: $FIREBASE_TOKEN
               PROJECT_ID: $FIREBASE_PROJECT
