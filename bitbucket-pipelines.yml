@@ -1,19 +1,3 @@
-# This is a sample build configuration for JavaScript.
-# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
-# Only use spaces to indent your .yml configuration.
-# -----
-# You can specify a custom docker image from Docker Hub as your build environment.
-# image: node:10.15.3
-
-# pipelines:
-#   default:
-#     - step:
-#         caches:
-#           - node
-#         script: # Modify the commands below to build your repository.
-#           - npm install
-#           - npm test
-
 image: node:10.15.3
 
 pipelines:
@@ -27,6 +11,8 @@ pipelines:
 
     - step:
         name: Deploy to Build
+        caches:
+          - node
         script:
           - npm install && npm run build
         artifacts:
@@ -35,11 +21,14 @@ pipelines:
     - step:
         name: Deploy to Firebase
         deployment: production
-        trigger:
+        #caches:
+        #  - firebase-tools
+        # trigger:
+        script:
           - npm install -g firebase-tools
           - firebase deploy --only hosting --token=$FIREBASE_TOKEN --project portfolio --non-interactive
         # script:
-        #   - pipe: atlassian/firebase-deploy:0.2.4 --only hosting
-        #     variables:
-        #       FIREBASE_TOKEN: $FIREBASE_TOKEN
-        #       PROJECT_ID: $FIREBASE_PROJECT
+        #    - pipe: atlassian/firebase-deploy:0.2.4 --only hosting
+        #      variables:
+        #        FIREBASE_TOKEN: $FIREBASE_TOKEN
+        #        PROJECT_ID: $FIREBASE_PROJECT
