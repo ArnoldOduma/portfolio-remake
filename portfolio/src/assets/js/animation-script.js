@@ -2,10 +2,7 @@ console.log(" -----    Animation Script is Working    -----");
 
 var canRun = true;
 $(document).ready(function () {
-  console.log("ready!");
 
-
-  // if ($(window).width() < 801) {
   $('.humberg-menu').on('click', function () {
     $('nav').toggleClass('nav-hide');
     $('.humberg-menu').toggleClass('humberg-x');
@@ -20,16 +17,15 @@ $(document).ready(function () {
     console.log("working");
     $('.modal').addClass('modal-hidden');
   });
-  $('.modal-btn').on('click', function () {
+
+  $(document).on('click', '.modal-btn',function () {
     console.log("working-show");
     $('.modal').addClass('modal-show');
     $('.modal').removeClass('modal-hidden');
-
   });
 
-
-  // }
 });
+
 $(document).on('scroll', function () {
   if ($(document).scrollTop() > 20) {
     $('header').addClass('shrink-header');
@@ -48,13 +44,4 @@ function myScale(arg) {
       $("."+i).removeClass('myScale');
     }
   }
-
-  // if (arg == 1) {
-  //   $(".1").css({"transform": "scale(5)","transition":"1.2s ease"});
-  // }
 }
-
-
-// function mailTo() {
-//   location.href("mailto:arnoldcliff98@gmail.com?subject=hello&body=fggf", '_self');
-// }
