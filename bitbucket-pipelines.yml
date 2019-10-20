@@ -18,10 +18,12 @@ image: node:10.15.3
 
 pipelines:
   default:
-    # - step:
-    #     name: Deploy to Test
-    #     script:
-    #       - npm install && npm test
+    - step:
+        caches:
+          - node
+        script:
+          - pwd
+          - ls -al
 
     - step:
         name: Deploy to Build
