@@ -7,14 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  loading = true;
+  loading: boolean;
+  load = true;
 
   constructor() { }
 
   ngOnInit() {
+
     setTimeout(() => {
       this.loading = false;
-    }, 2000);
+    }, 3000);
+    setTimeout(() => {
+      this.load = false;
+      this.loading = true;
+    }, 1000);
   }
 
 }

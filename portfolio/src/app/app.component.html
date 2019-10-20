@@ -10,28 +10,34 @@
       <li><a href="https://docs.google.com/document/d/1E0Q1BnPCfgCG9oCTISIOd49xthlYzBP6itv7yPmIuLM/edit?usp=sharing"
           target="_blank" rel="noopener noreferrer"> Resume</a></li>
       <li routerLink="home" routerLinkActive="active">Home</li>
-      <li routerLink="about" routerLinkActive="active">About</li>
+      <li routerLink="skills" routerLinkActive="active">Skills</li>
       <li routerLink="portfolio" routerLinkActive="active">Portfolio</li>
+      <li routerLink="about" routerLinkActive="active">About</li>
       <li class="modal-btn" routerLinkActive="active">Contact</li>
     </ul>
   </nav>
 </header>
 
-<section class="modal modal-show">
+<section class="modal modal-hidden">
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }">
+  </ngx-loading>
+
   <div class="humberg-modal humberg-modal-x">
     <hr>
     <hr>
   </div>
   <div class="contact-form">
-    <h1>Contact me today and lets set uo an appointment.<span>I'll buy the cofee</span> </h1>
+
+    <h1>Contact me today and let's set up an appointment <br> <span>I'll buy the cofee <i class="fab fa-java"></i></span>
+    </h1>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <p class="message" *ngIf="message">{{message}}</p>
       <input type="text" placeholder="Name" formControlName="name">
-      <input type="text" placeholder="Email" formControlName="email">
-      <textarea placeholder="Message" formControlName="message"> </textarea>
-      <button type="submit" [disabled]="form.invalid">Submit</button>
+      <input type="email" placeholder="Email" formControlName="email">
+      <textarea placeholder="Message" formControlName="message" rows="5"> </textarea>
+      <button class="gn-btn" type="submit"><span>Submit</span><i>&rarr;</i></button>
     </form>
   </div>
-
 </section>
 
 
@@ -61,7 +67,7 @@
           class="fab fa-linkedin-in"></i></a>
 
     </p>
-    <p class="credit">Designed by: <strong>Arnold Oduma </strong></p>
+    <p class="credit">Designed with love and coffee by: <strong>Arnold Oduma </strong></p>
   </div>
   <a class="top"><a>&uarr; <div class="inner-top "></div> </a></a>
 

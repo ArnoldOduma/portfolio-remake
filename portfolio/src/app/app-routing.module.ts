@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AboutComponent } from './components/about/about.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 const routes: Routes = [
   {
@@ -21,11 +22,11 @@ const routes: Routes = [
     component: PortfolioComponent,
     data: { title: 'My Portfolio' }
   },
-  // {
-  //   path: 'what',
-  //   // component:,
-  //   data: { title: 'What I Do' }
-  // },
+  {
+    path: 'skills',
+    component: SkillsComponent,
+    data: { title: 'What I Do' }
+  },
   {
     path: '',
     redirectTo: '/home',

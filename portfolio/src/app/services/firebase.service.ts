@@ -14,8 +14,10 @@ export class FirebaseService {
       name: value.name,
       email: value.email.toLowerCase(),
       message: value.message,
-      date: Date.now(),
-      html: value.html
+      date: value.date,
+      time: value.time,
+      html: value.html,
+      html2: value.html2
     });
   }
 }

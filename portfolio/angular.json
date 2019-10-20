@@ -28,8 +28,9 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/js/animation-script.js",
-              "src/assets/js/jquery-3.4.1.min.js"
+              "src/assets/js/jquery-3.4.1.min.js",
+              "src/assets/js/animation-script.js"
+
             ],
             "es5BrowserSupport": true
           },
@@ -88,8 +89,8 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/js/animation-script.js",
-              "src/assets/js/jquery-3.4.1.min.js"
+              "src/assets/js/jquery-3.4.1.min.js",
+              "src/assets/js/animation-script.js"
             ],
             "assets": [
               "src/favicon.ico",

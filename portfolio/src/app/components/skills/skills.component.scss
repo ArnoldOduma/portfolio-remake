@@ -1,0 +1,79 @@
+.skills-section {
+  position: relative;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #F69131, #ff6e3a);
+  padding-top: 12vh;
+}
+
+.skills-cont {
+  text-align: center;
+  padding: 10px;
+
+
+  >div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 30px;
+
+    h2 {
+      width: 100%;
+      padding: 30px 10px;
+      font-size: 2em;
+      color: white;
+      font-family: 'typographica', sans-serif;
+      letter-spacing: 10px;
+    }
+
+
+
+    >div {
+      width: 300px;
+      display: block;
+
+      p {
+        font-size: 1.6em;
+        padding: 2px 0;
+        cursor: pointer;
+        &:hover{
+          color: white;
+        }
+      }
+
+      i {
+        font-size: 5em;
+        color: #00b7ff;
+        margin: 10px;
+        text-shadow: 0 0 5px #3a3a3ab0;
+      }
+
+      .myScale {
+        color: #fff;
+        border-radius: 10px;
+        animation: grow 1s linear;
+      }
+
+      i:nth-child(even) {
+        font-size: 3.5em;
+        margin: 5px;
+      }
+    }
+  }
+}
+
+
+.myScale {
+  color: #fff;
+  border-radius: 10px;
+  animation: grow 1s linear;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1.2);
+  }
+
+  70% {
+    transform: scale(3);
+  }
+}

@@ -209,6 +209,18 @@ svg {
     position: relative;
     margin-top: -2em;
     border-radius: 5px;
+
+    i {
+      padding: 10px 20px;
+      animation: icon-dance 2s 2;
+      cursor: pointer;
+
+      &:hover {
+        animation: icon-dance 0.3s infinite;
+        color: #F69131;
+      }
+
+    }
   }
 
   .in-progress {
@@ -236,17 +248,6 @@ svg {
   70% {
     transform: rotate(10deg);
   }
-}
-
-.proj-left-div span i {
-  padding: 10px 20px;
-  animation: icon-dance 2s 2;
-  cursor: pointer;
-}
-
-.proj-left-div span i:hover {
-  animation: icon-dance 0.3s infinite;
-  color: #F69131;
 }
 
 .proj-right-div {
@@ -300,6 +301,13 @@ li {
   background: #23292E;
 }
 
+.see-more{
+  text-align: center;
+  p{
+    font-size: 2em;
+  }
+}
+
 @media (max-width: 699px) {
   .svg--lg {
     display: none;
@@ -309,6 +317,10 @@ li {
   .portfolio-header h2 {
     font-size: 2.5em;
   }
+  .proj-left-div span {
+      font-size: 1.5em;
+    }
+
 }
 
 @media (min-width: 1050px) {

@@ -5,39 +5,38 @@ const cors = require('cors');
 admin.initializeApp();
 
 let transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true,
-  service: 'gmail',
+  // host: 'smtp.gmail.com',
+  // port: 465,
+  // secure: true,
+  service: 'Gmail',
   auth: {
-    user: 'arnoldcliff99@gmail.com',
+    user: 'arnoldcliff98@gmail.com',
     pass: 'c3l12i9f6f6'
   }
 });
 
 exports.sendContactMessage = functions.firestore.document('messages/{messagesId}').onCreate((snap, context) => {
-
-    const snapshot = snap.data();
-    console.log("----------------------");
-    console.log("user created: " + snapshot.name);
-
-    const val = snapshot;
-
-    const mailOptions = {
+  const snapshot = snap.data();
+  const val = snapshot;
+  async function main() {
+    let info = await transporter.sendMail({
       from: val.email,
-      to: 'arnoldcliff98@gmail.com',
+      to: 'arnoldcliff99@gmail.com',
       subject: `Information request from ${val.name}`,
       html: val.html
-    };
-    return transporter.sendMail(mailOptions, (err, res) => {
-      if (err) {
-        // return res.send(err.toString());
-        console.log(error);
-      } else {
-        console.log("Message sent: " + res.message);
-      }
-      // return res.send('Email Sent successfully');
-      return 0;
-    })
+    });
+
+    let info2 = await transporter.sendMail({
+      from:  'arnoldcliff99@gmail.com',
+      to: val.email,
+      subject: `Your message has been received ${val.name}`,
+      html: val.html2
+    });
+
+    console.log('----------------------------');
+    console.log('Message sent', info.messageId, info2.messageId);
+    return 0;
+  }
+  main().catch(console.error);
   return 0;
 })
