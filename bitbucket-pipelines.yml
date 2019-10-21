@@ -29,9 +29,3 @@ pipelines:
           # - npm install
           # - ng build
           - firebase deploy --only hosting --token "$FIREBASE_TOKEN" --project $FIREBASE_PROJECT --public dist
-          # - firebase deploy --only hosting --token=$FIREBASE_TOKEN --project portfolio --non-interactive
-        # script:
-        #    - pipe: atlassian/firebase-deploy:0.2.4 --only hosting
-        #      variables:
-        #        FIREBASE_TOKEN: $FIREBASE_TOKEN
-        #        PROJECT_ID: $FIREBASE_PROJECT
