@@ -14,8 +14,13 @@ pipelines:
         caches:
           - node
         script:
-          - npm install @angular/cli@~7.3.9 && ng build --prod
-          - npm install && npm run build
+          # - npm install @angular/cli@~7.3.9 && ng build --prod
+          # - npm install && npm run build
+          - npm install
+          - npm install -g @angular/cli
+          - ng build --prod
+          - echo "$(ls -la dist/)"
+          - scp -r dist/ user@34.73.227.137:/projets/commerce1
         artifacts:
           - build/**
 
