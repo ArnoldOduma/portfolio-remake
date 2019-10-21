@@ -15,8 +15,8 @@ pipelines:
           - node
         script:
           - npm install && npm run build
-        artifacts:
-          - build/**
+        # artifacts:
+        #   - build/**
 
     - step:
         name: Deploy to Firebase
